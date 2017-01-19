@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo|Walter+Turncoat');
+
+$orange: #c67853;
+$light-grey: #737870;
+$dark-grey: #353333;
+$black: #0b0a09;
+$white: #f0f0f0;
+
+body {
+  color: $dark-grey;
+  font-family: 'Arvo', serif;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 0.5rem;
+  color: $orange;
+}
+
+nav {
+  display: flex;
+  background-color: $black;
+  border-bottom: 5px solid $orange;
+  .logo {
+    flex: 1;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+  ul {
+    display: flex;
+
+    li {
+      color: $white;
+      background-color: $black;
+      flex: 1 1 auto;
+      padding: 0.5rem;
+      margin: auto 1rem;
+    }
+    li:hover {
+      background-color: $dark-grey;
+    }
+  }
+}
+
+section {
+//  max-width: 860px;
+  margin: 2rem 1rem;
+//  margin-left: auto;
+//  margin-right: auto;
+}
