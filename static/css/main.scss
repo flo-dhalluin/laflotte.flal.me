@@ -1,21 +1,82 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo|Walter+Turncoat');
 
 $orange: #c67853;
+$dark-orange: #a64823;
 $light-grey: #737870;
 $dark-grey: #353333;
 $black: #0b0a09;
 $white: #f0f0f0;
 
 body {
-  color: $dark-grey;
-  font-family: 'Arvo', serif;
+    color: $dark-grey;
+    background: $light-grey;
+    font-family: 'Arvo', serif;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0.5rem;
+  color: $dark-orange;
+}
+
+h1 {
+  font-size: 1.8rem;
 }
 
 h2 {
   font-size: 1.6rem;
-  margin: 0.5rem;
-  color: $orange;
 }
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+
+.container {
+   max-width: 960px;
+   margin: 0 auto; 
+}
+
+.cuvee-list {
+    display:flex;
+    flex-wrap: wrap;
+    
+    .cuvee-item {
+	background-color: $dark-grey;
+	border: 5px solid $orange;
+	color: $white;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	text-decoration: none;
+	text-align: center;
+	width: 25%; // there sould be a break pt.
+	margin: 2rem;
+	height: 10rem;
+
+	.cuvee-id {
+	    display: block;
+	    font-size: 5rem;
+	    color: $orange;
+	}
+    }
+
+    .cuvee-item:hover {
+	background-color: $black;
+    }
+}
+
+
+
 
 nav {
   display: flex;
@@ -29,8 +90,7 @@ nav {
     padding: 0.5rem;
   }
   ul {
-    display: flex;
-
+      display: flex;
     li {
       color: $white;
       background-color: $black;
@@ -42,11 +102,4 @@ nav {
       background-color: $dark-grey;
     }
   }
-}
-
-section {
-//  max-width: 860px;
-  margin: 2rem 1rem;
-//  margin-left: auto;
-//  margin-right: auto;
 }

@@ -5,10 +5,13 @@
 <h2> Cuvées</h2>
 
 <div class="cuvee-list">
- <ul>
-   <li> <span> #1 </span> SMaSH </li>
-   <li> <span> #2 </span> 6-trouilles </li>
-   <li> <span> #3 </span> Cuvée Jean-Loutre </li>
- </ul>
+  {% for c in cuvees %}
+  <a href="{{c.path}}" class="cuvee-item">
+    <span class="cuvee-id"> # {{c.id}} </span>
+    <p> {{c.name}} </p>
+  </a>
+  {% endfor %}
+ </div>
 
+ 
 {% endblock %}
