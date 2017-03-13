@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Arvo|Walter+Turncoat');
 
-$orange: #c67853;
-$dark-orange: #a64823;
-$light-grey: #737870;
-$dark-grey: #353333;
-$black: #0b0a09;
-$white: #f0f0f0;
+$orange: rgba(247, 92, 3, 1);
+$dark-blue: rgba(31, 86, 115, 1);
+$light-blue: rgba(0, 167, 227, 1);
+$black: rgba(38, 38, 38, 1);
+$grey: rgba(65, 76, 77, 1);
+$white: #fff;
 
 body {
-    color: $dark-grey;
-    background: $light-grey;
+    color: $dark-blue;
+    background: $light-blue;
     font-family: 'Arvo', serif;
+}
+
+p {
+  margin: 0.7rem 1rem;
+  font-weight: 600;
 }
 
 h1,h2,h3,h4,h5 {
   margin: 0.5rem;
-  color: $dark-orange;
+  color: $orange;
+  font-weight: 800;
+  font-family: 'Walter Turncoat', sans-serif;
 }
 
 h1 {
@@ -41,18 +48,18 @@ h5 {
 
 .container {
    max-width: 960px;
-   margin: 0 auto; 
+   margin: 0 auto;
 }
 
 .cuvee-list {
     display:flex;
     flex-wrap: wrap;
-    
+
     .cuvee-item {
-	background-color: $dark-grey;
+	background-color: $grey;
 	border: 5px solid $orange;
 	color: $white;
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -80,8 +87,8 @@ h5 {
 
 nav {
   display: flex;
-  background-color: $black;
-  border-bottom: 5px solid $orange;
+  border-bottom: 5px solid $dark-blue;
+
   .logo {
     flex: 1;
     color: $white;
@@ -91,15 +98,15 @@ nav {
   }
   ul {
       display: flex;
-    li {
-      color: $white;
-      background-color: $black;
-      flex: 1 1 auto;
-      padding: 0.5rem;
-      margin: auto 1rem;
-    }
-    li:hover {
-      background-color: $dark-grey;
-    }
+      li {
+        flex: 1 1 auto;
+        padding: 0.5rem;
+        margin: auto 1rem;
+        a, a:visited {
+            color: $dark-blue;
+            font-weight: 600;
+        }
+
+      }
   }
 }

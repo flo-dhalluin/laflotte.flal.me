@@ -1,17 +1,14 @@
-{% extends "base.html" %}
 
+{% extends "base.html" %}
 {% block body %}
 
-<h2> Cuvées</h2>
+    <div class="cuvee-list">
+    {% for c in cuvees %}
+     <a href="{{c.path}}" class="cuvee-item">
+       <span class="cuvee-id"> # {{c.id}} </span>
+       <p> {{c.name}} </p>
+     </a>
+     {% endfor %}
+   </div>
 
-<div class="cuvee-list">
-  {% for c in cuvees %}
-  <a href="{{c.path}}" class="cuvee-item">
-    <span class="cuvee-id"> # {{c.id}} </span>
-    <p> {{c.name}} </p>
-  </a>
-  {% endfor %}
- </div>
-
- 
-{% endblock %}
+   {% endblock %}
