@@ -5,7 +5,7 @@
     <div class="cuvee-list">
     {% for c in cuvees %}
      <a href="{{c.path}}" class="cuvee-item">
-       <span class="cuvee-id"> # {{c.id}} </span>
+       <span class="cuvee-id"> {{c.id}} </span>
        <p> {{c.name}} </p>
      </a>
      {% endfor %}
